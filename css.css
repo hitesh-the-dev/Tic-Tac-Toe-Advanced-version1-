@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./imageback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+
+.box {
+    border: 1px solid black;
+    border-radius: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 3vw;
+
+     /* Neumorphism */
+    border-radius: 48px;
+    background: #e0e0e0;
+    box-shadow: 24px 24px 48px #868686,
+               -24px -24px 48px #ffffff;
+}
+#container {
+    /* height: calc(50vw * (100vh / 100vw)); */
+    width: 30vw;
+    aspect-ratio: 1 / 1;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    box-shadow: 5px 10px 5px 2px;
+    border-radius: 5%;
+    gap: 1vh;
+    padding: 1vh;
+    position:relative;
+    left: 10vw;
+}
+
+
+#maincontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+#firstSelect {
+    display: flex;
+    flex-direction:column;
+    margin-top: 30vh;
+    position: relative;
+    right: 5vw;
+    bottom: 15vh;
+    height: 50vh;
+
+}
+
+#imguser{
+    position: relative;
+    bottom: 10vh;
+}
+
+
+#secondSelect {
+    display: flex;
+    flex-direction:column;
+    margin-top: 30vh;
+    position: relative;
+    left: 25vw;
+    bottom: 25vh;
+    height: 50vh;
+}
+
+#user {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    height: 5vh;
+    width: 15vw;
+    margin-bottom: 5vh;
+    text-align: center;
+    position: relative;
+    bottom: 10vh;
+
+}
+
+#opponent {
+    background-color: transparent;
+    color: #000;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    height: 5vh;
+    width: 15vw;
+    margin-bottom: 5vh;
+    text-align: center;
+}
+
+
+
+option {
+    background-color: rgba(255, 255, 255, 0.504);
+    background: transparent;
+    /* NOTE: */
+    backdrop-filter: blur();
+}
+
+#print{
+    position: relative;
+    top: 45vh;
+    right: 33vw;
+    width: 25vw;
+    height: 50px;
+    font-size: clamp(1.5rem, 20vh, 3rem);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.493));
+    background-clip: text;
+    color: transparent;
+}
+
+.hidden{
+    display: none;
+}
+
+.zoom{
+    transform: scale(1.2);
+}
+
+#imguser{
+    transition: transform 0.3s ease;
+}
+
+#imgopponent{
+    transition: transform 0.3s ease;
+}
