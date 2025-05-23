@@ -218,13 +218,13 @@
 
 
 
-let container = document.getElementById("container");
-let print = document.getElementById("print");
+const  container = document.getElementById("container");
+const print = document.getElementById("print");
 
-let user = document.getElementById("user");
-let opponent = document.getElementById("opponent");
-let firstSelect = document.getElementById("firstSelect");
-let secondSelect = document.getElementById("secondSelect");
+const user = document.getElementById("user");
+const opponent = document.getElementById("opponent");
+const firstSelect = document.getElementById("firstSelect");
+const secondSelect = document.getElementById("secondSelect");
 
 let list = [
   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
@@ -245,7 +245,7 @@ let win = [
     [3, 8, 13, 18, 23],
     [4, 9, 14, 19, 24],
     [0, 6, 12, 18, 24],
-    [4, 8, 12, 16, 20],
+    [4, 8, 12, 16, 20]  
   ];
 
 
@@ -261,7 +261,7 @@ user.addEventListener("change", function () {
 
   flag = 1;
   let selectedValue = user.value;
-  let imguser = document.getElementById("imguser");
+  const imguser = document.getElementById("imguser");
 
   let imgPath = imageMap[selectedValue];
   if (imgPath) {
@@ -273,7 +273,7 @@ user.addEventListener("change", function () {
       opponent.classList.toggle("hidden");
 
       let selectedValue = opponent.value;
-      let imgopponent = document.getElementById("imgopponent");
+      const imgopponent = document.getElementById("imgopponent");
 
       let imgPath = imageMap[selectedValue];
 
